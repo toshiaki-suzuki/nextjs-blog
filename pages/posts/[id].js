@@ -1,3 +1,5 @@
+// Add this import
+import Date from '../../components/date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Layout from '../../components/layout';
 import Head from 'next/head';
@@ -30,7 +32,8 @@ export default function Post({ postData }) {
       <br />
       {postData.id}
       <br />
-      {postData.date}
+      {/* Replace {postData.date} with this */}
+      <Date dateString={postData.date} />
       <br />
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
